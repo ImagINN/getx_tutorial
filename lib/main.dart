@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Weight Tracker',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green.shade600),
         useMaterial3: true,
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.green[600],

@@ -2,11 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_tutorial/views/add_record.dart';
 import 'package:getx_tutorial/views/graph_view.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:getx_tutorial/views/history_view.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   State<Home> createState() => _HomeState();
 }
@@ -27,7 +30,9 @@ class _HomeState extends State<Home> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(32),
         ),
-        onPressed: null,
+        onPressed: () {
+          Get.to(() => AddRecord());
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
@@ -46,9 +51,9 @@ class _HomeState extends State<Home> {
         rightCornerRadius: 16,
         onTap: (index) {
           if (index == 0) {
-            Get.to(GraphView());
+            Get.to(() => GraphView());
           } else if (index == 1) {
-            Get.to(HistoryView());
+            Get.to(() => HistoryView());
           }
         },
       ),
